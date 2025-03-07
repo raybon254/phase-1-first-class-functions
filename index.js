@@ -1,13 +1,12 @@
-function receivesAFunction(callBack){
-    callBack();
+function receivesAFunction(callback){
+    callback();
 }
-receivesAFunction( () => console.log('call back functions'));
-
-function returnANamedFunction(){
-    return callback();
+function returnsANamedFunction(){
+    function named(){
+        console.log("this if from named function");
+    }
+    return named;
 }
-console.log(returnANamedFunction());
-
 function returnsAnAnonymousFunction(){
     return function(){
         console.log("This is from anonymous function");
