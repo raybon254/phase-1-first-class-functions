@@ -9,6 +9,7 @@ function returnANamedFunction(){
 console.log(returnANamedFunction());
 
 function returnsAnAnonymousFunction(){
-    console.log('anonymous')
+    return function(){
+        console.log("This is from anonymous function");
+    }
 }
-returnsAnAnonymousFunction()
